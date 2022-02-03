@@ -4,15 +4,27 @@ public class Searching {
     // binary search
     // binary tree search
 
-    // public int binarySearch(int[] arr, int left, int right, int target) {
-    // int mid = (right - left) / 2;
+    // TODO: BINARY SEARCH
 
-    // if(target == arr[mid]) {
-    // return mid;
-    // }
+    public int binarySearch(int[] arr, int value) {
+        int start = 0;
+        int end = arr.length - 1;
+        int middle = (start + end) / 2;
 
-    // if(target < arr[])
-    // binarySearch(arr, )
+        while (arr[middle] != value) {
+            if (value < arr[middle]) {
+                end = middle - 1;
+            } else {
+                start = middle + 1;
+            }
+            middle = (start + end) / 2;
+        }
+        if (arr[middle] == value) {
+            return middle;
+        } else {
+            return -1;
+        }
 
-    // }
+    }
+
 }
